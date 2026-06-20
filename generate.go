@@ -6,7 +6,7 @@ import (
 
 func Generate(input string, banner map[rune][]string) string {
 	if input == "\\n" {
-		return ""
+		return "\n"
 	}
 
 	segments := SplitInput(input)
@@ -20,5 +20,5 @@ func Generate(input string, banner map[rune][]string) string {
 			output = append(output, rows...)
 		}
 	}
-	return strings.Join(output, "\n")
+	return strings.Join(output, "\n")// + "\n"
 }

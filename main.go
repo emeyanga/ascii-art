@@ -15,6 +15,7 @@ func main() {
 
 	if _, err := ValidateInput(word); err != nil {
 		fmt.Println("Input invalidated!!")
+		return
 	}
 
 	banner, err := LoadBanner("standard.txt")
@@ -22,5 +23,5 @@ func main() {
 		fmt.Println("Could not find banner file!!!")
 		return
 	}
-	fmt.Println(Generate(word, banner))
+	fmt.Print(Generate(word, banner))
 }
